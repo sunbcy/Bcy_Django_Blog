@@ -24,8 +24,8 @@ urlpatterns = [
     # path('', views.index,name='index'),
     # #文章详情页
     # path('',views.article_detail,name='article_detail')
-    #path('favicon.ico', serve, {'path': 'static/img/favicon.ico'}),
-    #path('favicon.ico', RedirectView.as_view(url='static/img/favicon.ico')),
-    path('',include('blog.urls')),
-    path('mdeditor/',include('mdeditor.urls')),
+    # path('favicon.ico', serve, {'path': 'static/img/favicon.ico'}),
+    # path('favicon.ico', RedirectView.as_view(url='static/img/favicon.ico')),
+    path('', include('blog.urls')),
+    path('mdeditor/', include('mdeditor.urls')),
 ]

@@ -31,16 +31,16 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'simpleui',#后台
+    'simpleui',  # 后台
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig',#博客应用
-    'mdeditor',#Markdown编辑器
-    'import_export',#导入导出插件
+    'blog.apps.BlogConfig',  # 博客应用
+    'mdeditor',  # Markdown编辑器
+    'import_export',  # 导入导出插件
 ]
 
 MIDDLEWARE = [
@@ -67,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'blog.views.global_params',#自定义全局变量
+                'blog.views.global_params',  # 自定义全局变量
             ],
         },
     },
@@ -86,7 +86,7 @@ DATABASES = {
     }
 }
 
-#DATABASES = {
+# DATABASES = {
 #   'default': {
 #        'ENGINE': 'django.db.backends.mysql',
 #        'NAME': 'django_blog',
@@ -96,7 +96,7 @@ DATABASES = {
 #        'PORT': '3306',
 #        'OPTIONS': {'charset': 'utf8mb4'},
 #    }
-#}
+# }
 
 
 # Password validation
@@ -130,7 +130,7 @@ USE_I18N = True
 USE_L10N = False
 
 USE_TZ = True
-#日期格式
+# 日期格式
 DATETIME_FORMAT = 'Y-m-d'
 
 # Static files (CSS, JavaScript, Images)
@@ -143,18 +143,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 #]
 
 
-#SimpleUi后台设置
-SIMPLEUI_LOGO = 'https://cdn.jsdelivr.net/gh/sunbcy/Bcy_picbed@main/quanyecha.jpg' #登录页和后台logo
-SIMPLEUI_ANALYSIS = False #是否向SimpleUi收集分析信息
-SIMPLEUI_LOADING = False #是否打开Loading遮罩层
-SIMPLEUI_LOGIN_PARTICLES = True #登录页粒子动画
-SIMPLEUI_STATIC_OFFLINE = True #是否以脱机模式加载静态资源，为True的时候将默认从本地读取所有资源，即使没有联网一样可以。适合内网项目，不填该项或者为False的时候，默认从第三方的cdn获取
-SIMPLEUI_HOME_INFO = False #是否打开SimpleUi服务器信息
-SIMPLEUI_DEFAULT_THEME = 'simpleui.css' #默认主题 https://simpleui.88cto.com/docs/simpleui/QUICK.html#%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98
-SIMPLEUI_HOME_QUICK = True #后台页面是否显示最近动作
-#自定义后台菜单
+# SimpleUi后台设置
+SIMPLEUI_LOGO = 'https://cdn.jsdelivr.net/gh/sunbcy/Bcy_picbed@main/quanyecha.jpg'  # 登录页和后台logo
+SIMPLEUI_ANALYSIS = False  # 是否向SimpleUi收集分析信息
+SIMPLEUI_LOADING = False  # 是否打开Loading遮罩层
+SIMPLEUI_LOGIN_PARTICLES = True  # 登录页粒子动画
+SIMPLEUI_STATIC_OFFLINE = True  # 是否以脱机模式加载静态资源，为True的时候将默认从本地读取所有资源，即使没有联网一样可以。适合内网项目，不填该项或者为False的时候，默认从第三方的cdn获取
+SIMPLEUI_HOME_INFO = False  # 是否打开SimpleUi服务器信息
+SIMPLEUI_DEFAULT_THEME = 'simpleui.css'  # 默认主题 https://simpleui.88cto.com/docs/simpleui/QUICK.html#%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98
+SIMPLEUI_HOME_QUICK = True  # 后台页面是否显示最近动作
+# 自定义后台菜单
 SIMPLEUI_CONFIG = {
-    'system_keep': False,  #去除系统模块
+    'system_keep': False,   # 去除系统模块
     'menus': [{
         'name': '文章管理',
         'icon': 'fas fa-book-open',
@@ -237,9 +237,9 @@ SIMPLEUI_CONFIG = {
     }]
 }
 
-#mdeditor设置
+# mdeditor设置
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
-MEDIA_URL = '/media/'   #你上传的文件和图片会默认存在/uploads/editor下
+MEDIA_URL = '/media/'   # 你上传的文件和图片会默认存在/uploads/editor下
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # 日志记录
@@ -248,8 +248,8 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format' :"[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-            'datefmt' :"%d/%b/%Y %H:%M:%S"
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
         },
         'simple': {
             'format': '%(levelname)s %(message)s'
